@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Módulo 03 - Instrumentos Gemológicos. Curso de Gemología del Instituto Gemológico de Antioquia.">
+
+    <title>
+        Módulo 03 | Instrumentos Gemológicos
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="campus-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGOTIPO INSTITUCIONAL -->
+
+        <a
+            href="index.html"
+            class="brand">
+
+            <img
+                src="img/logo-iga.png"
+                alt="Instituto Gemológico de Antioquia"
+                class="brand-logo">
+
+        </a>
+
+
+        <!-- NAVEGACIÓN PRINCIPAL -->
+
+        <nav class="main-navigation">
+
+
+            <a href="index.html">
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="index.html#curso">
+
+                <span class="nav-icon">
+                    ◇
+                </span>
+
+                Curso
+
+            </a>
+
+
+            <a
+                href="index.html#modulos"
+                class="nav-active">
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                Módulos
+
+            </a>
+
+
+            <a href="recursos.html">
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                Recursos
+
+            </a>
+
+
+            <a href="evaluaciones.html">
+
+                <span class="nav-icon">
+                    ☑
+                </span>
+
+                Evaluaciones
+
+            </a>
+
+
+            <a href="#progreso">
+
+                <span class="nav-icon">
+                    ◔
+                </span>
+
+                Mi progreso
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- MENÚ RESPONSIVE -->
+
+        <button
+            class="mobile-menu-button"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<div class="breadcrumb-container">
+
+    <div class="breadcrumb">
+
+
+        <a href="index.html">
+            Curso de Gemología
+        </a>
+
+
+        <span>
+            ›
+        </span>
+
+
+        <a href="index.html#modulos">
+            Módulos
+        </a>
+
+
+        <span>
+            ›
+        </span>
+
+
+        <strong>
+            Módulo 03
+        </strong>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CABECERA DEL MÓDULO
+===================================================== -->
+
+<section class="module-header">
+
+    <div class="module-header-content">
+
+
+        <span class="module-course-label">
+            CURSO DE GEMOLOGÍA
+        </span>
+
+
+        <div class="module-title-number">
+
+            MÓDULO 03 DE 08
+
+        </div>
+
+
+        <h1>
+            Instrumentos gemológicos
+        </h1>
+
+
+        <p class="module-subtitle">
+
+            Conocimiento y utilización de los principales
+            instrumentos empleados para la observación,
+            análisis e identificación de materiales gemológicos.
+
+        </p>
+
+
+
+        <!-- INFORMACIÓN DEL MÓDULO -->
+
+        <div class="module-meta">
+
+
+            <div class="meta-item">
+
+                <span class="meta-icon">
+                    ◷
+                </span>
+
+                <div>
+
+                    <small>
+                        Tiempo estimado
+                    </small>
+
+                    <strong>
+                        8 horas
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meta-item">
+
+                <span class="meta-icon">
+                    ◫
+                </span>
+
+                <div>
+
+                    <small>
+                        Modalidad
+                    </small>
+
+                    <strong>
+                        Virtual
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meta-item">
+
+                <span class="meta-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <small>
+                        Evaluación
+                    </small>
+
+                    <strong>
+                        Autocalificable
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PROGRESO -->
+
+        <div
+            class="module-progress"
+            id="progreso">
+
+
+            <div class="progress-information">
+
+                <span>
+                    PROGRESO DEL MÓDULO
+                </span>
+
+
+                <strong id="modulePercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-background">
+
+                <div
+                    id="moduleProgressBar"
+                    class="progress-value">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAMPUS LAYOUT
+===================================================== -->
+
+<div class="campus-layout">
+
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="campus-sidebar">
+
+
+        <div class="sidebar-title">
+            CONTENIDO DEL MÓDULO
+        </div>
+
+
+        <a
+            href="#presentacion"
+            class="sidebar-item active">
+
+            <span class="sidebar-icon">
+                ◉
+            </span>
+
+            <span>
+                Presentación
+            </span>
+
+        </a>
+
+
+        <a
+            href="#objetivos"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                ◎
+            </span>
+
+            <span>
+                Objetivos
+            </span>
+
+        </a>
+
+
+        <a
+            href="#contenido"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                ☷
+            </span>
+
+            <span>
+                Contenido
+            </span>
+
+        </a>
+
+
+        <a
+            href="#instrumentos"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                🔬
+            </span>
+
+            <span>
+                Instrumentos
+            </span>
+
+        </a>
+
+
+        <a
+            href="#material"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                ▧
+            </span>
+
+            <span>
+                Material principal
+            </span>
+
+        </a>
+
+
+        <a
+            href="#actividad"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                ✎
+            </span>
+
+            <span>
+                Actividad
+            </span>
+
+        </a>
+
+
+        <a
+            href="#evaluacion"
+            class="sidebar-item">
+
+            <span class="sidebar-icon">
+                ☑
+            </span>
+
+            <span>
+                Evaluación
+            </span>
+
+        </a>
+
+
+
+        <div class="sidebar-divider"></div>
+
+
+
+        <!-- =================================================
+             MÓDULOS DEL CURSO
+        ================================================== -->
+
+        <div class="sidebar-title">
+            MÓDULOS DEL CURSO
+        </div>
+
+
+
+        <a
+            href="modulo-01.html"
+            class="course-module">
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                Identificación de gemas
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-02.html"
+            class="course-module">
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                Propiedades físicas y ópticas
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-03.html"
+            class="course-module active-course-module">
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                Instrumentos gemológicos
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-04.html"
+            class="course-module">
+
+            <span>
+                04
+            </span>
+
+            <strong>
+                Diamantes, rubíes, zafiros,
+                esmeraldas y perlas
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-05.html"
+            class="course-module">
+
+            <span>
+                05
+            </span>
+
+            <strong>
+                Gemas naturales, sintéticas,
+                tratadas e imitaciones
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-06.html"
+            class="course-module">
+
+            <span>
+                06
+            </span>
+
+            <strong>
+                Tasación y valoración
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-07.html"
+            class="course-module">
+
+            <span>
+                07
+            </span>
+
+            <strong>
+                Esmeraldas colombianas
+            </strong>
+
+        </a>
+
+
+
+        <a
+            href="modulo-08.html"
+            class="course-module">
+
+            <span>
+                08
+            </span>
+
+            <strong>
+                Bonos adicionales
+            </strong>
+
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- =================================================
+         ÁREA DE APRENDIZAJE
+    ================================================== -->
+
+    <main class="learning-area">
+
+
+
+        <!-- =================================================
+             PRESENTACIÓN
+        ================================================== -->
+
+        <section
+            id="presentacion"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon blue">
+                    🔬
+                </div>
+
+
+                <div>
+
+                    <span>
+                        INTRODUCCIÓN
+                    </span>
+
+
+                    <h2>
+                        Presentación del módulo
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="academic-text">
+
+
+                <p>
+
+                    El Módulo 03 presenta los principales
+                    instrumentos utilizados en el análisis
+                    gemológico y explica su importancia dentro
+                    del proceso de identificación de las gemas.
+
+                </p>
+
+
+                <p>
+
+                    Los instrumentos gemológicos permiten
+                    observar, medir y analizar diferentes
+                    características de los materiales.
+                    Su utilización adecuada facilita la
+                    obtención de información que complementa
+                    la observación visual.
+
+                </p>
+
+
+                <p>
+
+                    Durante este módulo, el estudiante
+                    conocerá la función de diferentes
+                    herramientas utilizadas en gemología,
+                    sus aplicaciones y las consideraciones
+                    básicas para su utilización.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="info-callout">
+
+
+                <div class="callout-icon">
+                    🔍
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Importancia del instrumental gemológico
+                    </strong>
+
+
+                    <p>
+
+                        La correcta selección y utilización
+                        de los instrumentos permite obtener
+                        información objetiva que contribuye
+                        al proceso de identificación de una gema.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             OBJETIVOS
+        ================================================== -->
+
+        <section
+            id="objetivos"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon blue">
+                    ◎
+                </div>
+
+
+                <div>
+
+                    <span>
+                        APRENDIZAJE
+                    </span>
+
+
+                    <h2>
+                        Objetivos de aprendizaje
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <p class="section-introduction">
+
+                Al finalizar este módulo, el estudiante
+                podrá reconocer la función de diferentes
+                instrumentos utilizados en el análisis
+                gemológico y comprender su importancia
+                dentro del proceso de identificación.
+
+            </p>
+
+
+
+            <div class="objectives-grid">
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Identificar instrumentos
+                        </h3>
+
+
+                        <p>
+
+                            Reconocer los principales
+                            instrumentos empleados en
+                            el análisis gemológico.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Comprender su función
+                        </h3>
+
+
+                        <p>
+
+                            Comprender la finalidad de
+                            cada instrumento dentro del
+                            proceso de análisis.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Relacionar instrumento y propiedad
+                        </h3>
+
+
+                        <p>
+
+                            Relacionar los instrumentos
+                            con las propiedades que permiten
+                            observar o medir.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        04
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Reconocer buenas prácticas
+                        </h3>
+
+
+                        <p>
+
+                            Comprender la importancia de
+                            utilizar correctamente los
+                            instrumentos durante el análisis.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENIDO
+        ================================================== -->
+
+        <section
+            id="contenido"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon blue">
+                    ☷
+                </div>
+
+
+                <div>
+
+                    <span>
+                        PLAN DE ESTUDIO
+                    </span>
+
+
+                    <h2>
+                        Contenido del módulo
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <p class="section-introduction">
+
+                El contenido introduce al estudiante
+                en el instrumental básico utilizado
+                para la observación y análisis de gemas.
+
+            </p>
+
+
+
+            <div class="topic-list">
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Introducción al instrumental gemológico
+                        </h3>
+
+
+                        <p>
+
+                            Importancia de los instrumentos
+                            dentro del proceso de identificación.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Observación y magnificación
+                        </h3>
+
+
+                        <p>
+
+                            Herramientas destinadas a ampliar
+                            y observar las características
+                            internas y externas de las gemas.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        03
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Medición y análisis
+                        </h3>
+
+
+                        <p>
+
+                            Instrumentos utilizados para
+                            obtener información física y
+                            óptica de los materiales.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        04
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Fuentes de iluminación
+                        </h3>
+
+
+                        <p>
+
+                            Importancia de la iluminación
+                            adecuada durante la observación
+                            gemológica.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        05
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Instrumentos ópticos
+                        </h3>
+
+
+                        <p>
+
+                            Herramientas utilizadas para
+                            estudiar el comportamiento
+                            óptico de las gemas.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="topic-row">
+
+
+                    <span class="topic-number">
+                        06
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Uso correcto del instrumental
+                        </h3>
+
+
+                        <p>
+
+                            Recomendaciones generales para
+                            manipular y utilizar instrumentos
+                            de análisis gemológico.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INSTRUMENTOS
+        ================================================== -->
+
+        <section
+            id="instrumentos"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon gold">
+                    🔬
+                </div>
+
+
+                <div>
+
+                    <span>
+                        INSTRUMENTAL
+                    </span>
+
+
+                    <h2>
+                        Principales instrumentos
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <p class="section-introduction">
+
+                Los siguientes instrumentos representan
+                herramientas fundamentales dentro del
+                trabajo de observación y análisis gemológico.
+                La selección definitiva debe ajustarse al
+                instrumental contemplado en el material
+                académico del curso.
+
+            </p>
+
+
+
+            <div class="objectives-grid">
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        🔍
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Lupa gemológica
+                        </h3>
+
+
+                        <p>
+
+                            Instrumento utilizado para realizar
+                            observaciones ampliadas de las
+                            características externas e internas
+                            de una gema.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        ◉
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Refractómetro
+                        </h3>
+
+
+                        <p>
+
+                            Instrumento óptico utilizado para
+                            estudiar el comportamiento de la
+                            luz y obtener información relevante
+                            durante la identificación.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        ◇
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Polariscopio
+                        </h3>
+
+
+                        <p>
+
+                            Herramienta empleada para observar
+                            determinadas características
+                            relacionadas con el comportamiento
+                            óptico de los materiales.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="objective-card">
+
+
+                    <div class="objective-number">
+                        ◈
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Dicroscopio
+                        </h3>
+
+
+                        <p>
+
+                            Instrumento utilizado para observar
+                            fenómenos relacionados con la
+                            absorción de la luz y el pleocroísmo.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MATERIAL
+        ================================================== -->
+
+        <section
+            id="material"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon gold">
+                    ▧
+                </div>
+
+
+                <div>
+
+                    <span>
+                        MATERIAL ACADÉMICO
+                    </span>
+
+
+                    <h2>
+                        Material principal
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="material-main-card">
+
+
+                <div class="pdf-icon">
+                    PDF
+                </div>
+
+
+                <div class="material-information">
+
+
+                    <span class="material-type">
+                        DOCUMENTO DE ESTUDIO
+                    </span>
+
+
+                    <h3>
+                        Instrumentos gemológicos
+                    </h3>
+
+
+                    <p>
+
+                        Material académico correspondiente
+                        al Módulo 03 del Curso de Gemología.
+
+                    </p>
+
+
+
+                    <div class="material-details">
+
+
+                        <span>
+                            📄 Formato PDF
+                        </span>
+
+
+                        <span>
+                            👁 Visualización en línea
+                        </span>
+
+
+                        <span>
+                            🔒 Solo lectura
+                        </span>
+
+
+                    </div>
+
+
+
+                    <a
+                        href="https://drive.google.com/drive/folders/1fMyev29prYGt2k2FhxbmVxTWil86gFkd?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="gold-button">
+
+                        Abrir material
+
+
+                        <span>
+                            ↗
+                        </span>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="security-notice">
+
+
+                <strong>
+                    🔒 Material protegido
+                </strong>
+
+
+                <p>
+
+                    El material académico debe configurarse
+                    en Google Drive con permisos de
+                    visualización para los estudiantes.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACTIVIDAD
+        ================================================== -->
+
+        <section
+            id="actividad"
+            class="academic-section">
+
+
+            <div class="section-heading">
+
+
+                <div class="heading-icon blue">
+                    ✎
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ACTIVIDAD DE APRENDIZAJE
+                    </span>
+
+
+                    <h2>
+                        Reconocimiento del instrumental
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="activity-card">
+
+
+                <div class="activity-badge">
+                    A3
+                </div>
+
+
+
+                <div class="activity-content">
+
+
+                    <span>
+                        ACTIVIDAD 03
+                    </span>
+
+
+                    <h3>
+                        Identificación de instrumentos gemológicos
+                    </h3>
+
+
+                    <p>
+
+                        A partir del material de estudio,
+                        el estudiante deberá relacionar
+                        diferentes instrumentos con su
+                        función dentro del proceso de
+                        observación y análisis de las gemas.
+
+                    </p>
+
+
+
+                    <div class="activity-meta">
+
+
+                        <span>
+                            ✎ Actividad práctica
+                        </span>
+
+
+                        <span>
+                            🔬 Instrumental
+                        </span>
+
+
+                        <span>
+                            📚 Basada en el módulo
+                        </span>
+
+
+                    </div>
+
+
+
+                    <a
+                        href="#"
+                        class="blue-button">
+
+                        Iniciar actividad
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             EVALUACIÓN
+        ================================================== -->
+
+        <section
+            id="evaluacion"
+            class="academic-section">
+
+
+            <div class="evaluation-main-card">
+
+
+                <div class="evaluation-heading">
+
+
+                    <div class="evaluation-icon">
+                        ☑
+                    </div>
+
+
+                    <div>
+
+
+                        <span>
+                            EVALUACIÓN DEL MÓDULO
+                        </span>
+
+
+                        <h2>
+                            Evaluación de instrumentos gemológicos
+                        </h2>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <p>
+
+                    Una vez revisado el material académico
+                    y completada la actividad, el estudiante
+                    podrá realizar la evaluación correspondiente
+                    al Módulo 03.
+
+                </p>
+
+
+
+                <div class="evaluation-features">
+
+
+                    <div>
+
+                        <strong>
+                            ✓
+                        </strong>
+
+                        <span>
+                            10 preguntas
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ✓
+                        </strong>
+
+                        <span>
+                            Calificación automática
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ✓
+                        </strong>
+
+                        <span>
+                            Resultado inmediato
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <a
+                    href="evaluaciones.html"
+                    class="evaluation-button">
+
+                    Iniciar evaluación
+
+
+                    <span>
+                        ↗
+                    </span>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINALIZACIÓN
+        ================================================== -->
+
+        <section class="completion-card">
+
+
+            <div class="completion-information">
+
+
+                <div class="completion-icon">
+                    ✓
+                </div>
+
+
+                <div>
+
+
+                    <span>
+                        FINALIZACIÓN DEL MÓDULO
+                    </span>
+
+
+                    <h2>
+                        Para completar el módulo
+                    </h2>
+
+
+                    <p>
+
+                        Revise el material, desarrolle la
+                        actividad y complete la evaluación.
+                        Posteriormente podrá marcar este
+                        módulo como completado.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="completion-actions">
+
+
+                <a
+                    href="#progreso"
+                    class="progress-button">
+
+                    ◔ Ver mi progreso
+
+                </a>
+
+
+
+                <button
+                    onclick="completarModulo(3)"
+                    class="complete-button">
+
+                    ✓ Marcar módulo como completado
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVEGACIÓN ENTRE MÓDULOS
+        ================================================== -->
+
+        <div class="module-navigation">
+
+
+            <a
+                href="modulo-02.html"
+                class="previous-module">
+
+                ←
+
+                <span>
+                    Módulo anterior
+                </span>
+
+            </a>
+
+
+
+            <div class="current-module">
+
+                <span>
+                    💎
+                </span>
+
+                MÓDULO 03 DE 08
+
+            </div>
+
+
+
+            <a
+                href="modulo-04.html"
+                class="next-module">
+
+                <span>
+                    Siguiente módulo
+                </span>
+
+                →
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="campus-footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="img/logo-iga.png"
+                alt="Instituto Gemológico de Antioquia">
+
+        </div>
+
+
+
+        <div class="footer-information">
+
+
+            <strong>
+                INSTITUTO GEMOLÓGICO DE ANTIOQUIA
+            </strong>
+
+
+            <p>
+                Curso de Gemología
+            </p>
+
+
+            <p>
+                Formación especializada en gemología
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-copy">
+
+
+            <p>
+                © 2026 Instituto Gemológico de Antioquia
+            </p>
+
+
+            <p>
+                Todos los derechos reservados
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
