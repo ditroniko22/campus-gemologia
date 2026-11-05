@@ -1,0 +1,18 @@
+name: Recuperar despliegue de Pages
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/recover-pages.yml']
+  workflow_dispatch:
+permissions:
+  pages: write
+jobs:
+  cancel-stuck-deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Cancelar el despliegue bloqueado identificado en los registros
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST repos/ditroniko22/campus-gemologia/pages/deployments/250e615f26f78cfef691435598a37b655301b726/cancel
