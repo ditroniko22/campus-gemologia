@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function () {
     verificarCursoCompleto(); actualizarBotonLectura();
     const campo = document.getElementById("buscar-recursos");
     const estado = document.getElementById("resultados-recursos");
-    const tarjetas = Array.from(document.querySelectorAll(".iga-drive-card"));
+    const tarjetas = Array.from(document.querySelectorAll("#carpetas-drive .iga-drive-card"));
     const normalizar = texto => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     if (campo && estado) {
         const filtrar = () => {
