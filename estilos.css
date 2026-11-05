@@ -6130,3 +6130,36 @@ a {
 .guide-table a {color:#155c78;text-decoration:underline;}
 a:focus-visible,button:focus-visible,input:focus-visible {outline:3px solid #b78324;outline-offset:4px;}
 @media (min-width:901px) {.header-container {flex-wrap:wrap;gap:12px;} .main-navigation {flex-wrap:wrap;gap:16px;}}
+
+/* Colección visual de esmeraldas: portada, módulos y tarjetas. */
+.campus-hero { background: radial-gradient(ellipse at 80% 30%, #174b3b, #082c27 65%, #061f20); }
+.campus-hero::before, .campus-hero::after { pointer-events: none; }
+.hero-container { grid-template-columns: 1fr 1.1fr; gap: 48px; padding: 55px 0; }
+.hero-visual.emerald-hero-photo { display: block; width: 100%; min-width: 0; margin: 0; position: relative; overflow: hidden; border-radius: 24px 24px 70px 24px; border: 1px solid #bda46855; box-shadow: 0 25px 65px #0006; }
+.emerald-hero-photo img { display: block; width: 100%; height: 440px; object-fit: cover; }
+.emerald-hero-photo figcaption { position: absolute; inset: auto 0 0; padding: 48px 26px 24px; background: linear-gradient(transparent, #031b17ed); color: #fff; font-size: 18px; font-weight: 600; }
+.emerald-hero-photo small { display: block; margin-top: 8px; color: #d7e4dd; font-size: 11px; font-weight: 400; }
+.emerald-card-photo { margin: -25px -25px 22px; overflow: hidden; background: #0b2d25; }
+.emerald-card-photo img { display: block; width: 100%; height: 200px; object-fit: cover; transition: transform .35s ease; }
+.module-card:hover .emerald-card-photo img { transform: scale(1.04); }
+.module-card-number { z-index: 1; color: #fff; background: #06291ed9; border: 1px solid #d4b36788; border-radius: 9px; padding: 3px 12px; font-size: 23px; }
+.emerald-image-note { color: #52635b; font-size: 13px; margin: 0 0 22px; text-align: center; }
+.emerald-module-header { background: linear-gradient(120deg, #062b25, #134e3a); }
+.emerald-module-layout { width: min(1200px, 90%); margin: auto; display: grid; grid-template-columns: 1.15fr 1fr; gap: 42px; align-items: center; padding: 46px 0; }
+.emerald-module-layout .module-header-content { width: 100%; padding: 0; min-width: 0; }
+.emerald-module-photo { margin: 0; overflow: hidden; border-radius: 18px; border: 1px solid #c7a85d55; background: #082b23; box-shadow: 0 16px 45px #0003; }
+.emerald-module-photo img { display: block; width: 100%; height: 340px; object-fit: cover; }
+.emerald-module-photo figcaption { padding: 12px 16px; font-size: 11px; line-height: 1.6; color: #d8e8df; }
+@media (max-width: 900px) {
+ .hero-container, .emerald-module-layout { grid-template-columns: 1fr; gap: 28px; }
+ .hero-visual.emerald-hero-photo { max-width: 650px; margin: auto; }
+ .emerald-hero-photo img { height: auto; aspect-ratio: 3 / 2; }
+ .emerald-module-photo img { height: auto; max-height: 380px; }
+ .emerald-module-layout { padding: 32px 0; }
+}
+@media (max-width: 480px) {
+ .hero-container { padding: 32px 0; }
+ .emerald-hero-photo figcaption { font-size: 15px; padding: 32px 18px 18px; }
+ .emerald-card-photo img { height: 210px; }
+}
+@media (prefers-reduced-motion: reduce) { .emerald-card-photo img { transition: none; } }
