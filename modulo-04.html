@@ -52,8 +52,9 @@
 
         <!-- NAVEGACIÓN -->
 
-        <nav class="main-navigation">
-            <a href="https://classroom.google.com/u/6/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
+        <nav class="main-navigation" id="navegacion-principal" aria-label="Navegación principal">
+<a href="guia.html">Guía de acceso</a>
+            <a href="https://classroom.google.com/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
             <a href="recursos.html#carpetas-drive">Carpetas de Drive</a>
 
 
@@ -131,7 +132,7 @@
         <!-- MENÚ MÓVIL -->
 
         <button
-            class="mobile-menu-button"
+            class="mobile-menu-button" type="button" aria-label="Abrir menú" aria-controls="navegacion-principal" aria-expanded="false"
             onclick="toggleMenu()">
 
             ☰
@@ -281,7 +282,7 @@
                     </small>
 
                     <strong>
-                        Autocalificable
+                        Consultar en Classroom
                     </strong>
 
                 </div>
@@ -298,12 +299,13 @@
         <div
             class="module-progress"
             id="progreso">
+<p class="progress-disclaimer">Registro personal de lectura en este navegador; no equivale a una calificación ni se sincroniza con Classroom.</p>
 
 
             <div class="progress-information">
 
                 <span>
-                    PROGRESO DEL MÓDULO
+                    LECTURA DEL MÓDULO
                 </span>
 
 
@@ -1572,18 +1574,8 @@
 
 
                     <a
-                        href="#"
-                        class="blue-button">
-
-                        Iniciar actividad
-
-
-                        <span>
-                            →
-                        </span>
-
-
-                    </a>
+                        href="https://classroom.google.com/w/ODY5NzM1NDYzODQ5/t/all" target="_blank" rel="noopener noreferrer"
+                        class="blue-button">Consultar actividades en Classroom ↗</a>
 
 
                 </div>
@@ -1636,14 +1628,7 @@
 
 
 
-                <p>
-
-                    Una vez revisado el material académico
-                    y desarrollada la actividad, el estudiante
-                    podrá realizar la evaluación correspondiente
-                    al Módulo 04.
-
-                </p>
+                <p>Las evaluaciones se anunciarán en Classroom cuando estén publicadas. La marca de lectura del campus no sustituye su realización.</p>
 
 
 
@@ -1657,7 +1642,7 @@
                         </strong>
 
                         <span>
-                            10 preguntas
+                            Pendiente de publicación
                         </span>
 
                     </div>
@@ -1670,7 +1655,7 @@
                         </strong>
 
                         <span>
-                            Calificación automática
+                            Según la actividad publicada
                         </span>
 
                     </div>
@@ -1683,7 +1668,7 @@
                         </strong>
 
                         <span>
-                            Resultado inmediato
+                            Revisión en Classroom
                         </span>
 
                     </div>
@@ -1697,7 +1682,7 @@
                     href="evaluaciones.html"
                     class="evaluation-button">
 
-                    Iniciar evaluación
+                    Consultar evaluaciones
 
 
                     <span>
@@ -1743,14 +1728,7 @@
                     </h2>
 
 
-                    <p>
-
-                        Revise el material, desarrolle
-                        la actividad y complete la evaluación.
-                        Posteriormente podrá marcar este
-                        módulo como completado.
-
-                    </p>
+                    <p>La lectura puede marcarse al terminar la consulta del contenido. Esta marca personal no sustituye las actividades ni la evaluación docente.</p>
 
 
                 </div>
@@ -1774,10 +1752,10 @@
 
 
                 <button
-                    onclick="completarModulo(4)"
+                    onclick="alternarLectura(4)"
                     class="complete-button">
 
-                    ✓ Marcar módulo como completado
+                    ✓ Marcar lectura como realizada
 
                 </button>
 

@@ -15,52 +15,24 @@ const TOTAL_MODULOS = 8;
    INICIALIZAR PROGRESO
 ========================================================= */
 
+let progresoEnMemoria = {};
+let almacenamientoDisponible = true;
 function obtenerProgreso() {
-
-    let progreso =
-        JSON.parse(
-            localStorage.getItem("progresoGemologia")
-        );
-
-    if (!progreso) {
-
-        progreso = {};
-
-        for (
-            let i = 1;
-            i <= TOTAL_MODULOS;
-            i++
-        ) {
-
-            progreso[i] = false;
-
-        }
-
-        localStorage.setItem(
-            "progresoGemologia",
-            JSON.stringify(progreso)
-        );
-
-    }
-
+    let datos = progresoEnMemoria;
+    try {
+        const leido = almacenamientoDisponible ? JSON.parse(localStorage.getItem("progresoGemologia") || "null") : null;
+        if (leido && typeof leido === "object" && !Array.isArray(leido)) datos = leido;
+    } catch (error) { almacenamientoDisponible = false; }
+    const progreso = {};
+    for (let i = 1; i <= TOTAL_MODULOS; i++) progreso[i] = datos[i] === true;
+    progresoEnMemoria = progreso;
     return progreso;
-
 }
-
-
-/* =========================================================
-   GUARDAR PROGRESO
-========================================================= */
-
 function guardarProgreso(progreso) {
-
-    localStorage.setItem(
-        "progresoGemologia",
-        JSON.stringify(progreso)
-    );
-
+    progresoEnMemoria = progreso;
+    try { localStorage.setItem("progresoGemologia", JSON.stringify(progreso)); almacenamientoDisponible = true; }
+    catch (error) { almacenamientoDisponible = false; }
 }
-
 
 /* =========================================================
    COMPLETAR MÓDULO
@@ -90,7 +62,7 @@ function completarModulo(numeroModulo) {
     mostrarMensaje(
         "✓ Módulo " +
         numeroModulo +
-        " completado correctamente."
+        " marcado como leído."
     );
 
 
@@ -327,52 +299,9 @@ function actualizarProgresoGeneral() {
 ========================================================= */
 
 function verificarCursoCompleto() {
-
-    const porcentaje =
-        calcularProgresoGeneral();
-
-
-    if (
-        porcentaje === 100
-    ) {
-
-        mostrarMensaje(
-            "🎓 ¡Felicitaciones! El curso de Gemología ha sido completado."
-        );
-
-        mostrarBotonCertificado();
-
-    }
-
+    const contenedor = document.getElementById("certificadoContainer");
+    if (contenedor) contenedor.style.display = calcularProgresoGeneral() === 100 ? "block" : "none";
 }
-
-
-/* =========================================================
-   MOSTRAR BOTÓN DE CERTIFICADO
-========================================================= */
-
-function mostrarBotonCertificado() {
-
-    const contenedor =
-        document.getElementById(
-            "certificadoContainer"
-        );
-
-
-    if (
-        !contenedor
-    ) {
-
-        return;
-
-    }
-
-
-    contenedor.style.display =
-        "block";
-
-}
-
 
 /* =========================================================
    MENSAJE DEL SISTEMA
@@ -394,8 +323,9 @@ function mostrarMensaje(texto) {
             );
 
 
-        mensaje.id =
-            "campusMessage";
+        mensaje.id = "campusMessage";
+        mensaje.setAttribute("role", "status");
+        mensaje.setAttribute("aria-live", "polite");
 
 
         document.body.appendChild(
@@ -447,9 +377,9 @@ function toggleMenu() {
     }
 
 
-    menu.classList.toggle(
-        "mobile-open"
-    );
+    const abierto = menu.classList.toggle("mobile-open");
+    const boton = document.querySelector(".mobile-menu-button");
+    if (boton) boton.setAttribute("aria-expanded", String(abierto));
 
 }
 
@@ -629,11 +559,42 @@ function reiniciarCurso() {
     }
 
 
-    localStorage.removeItem(
-        "progresoGemologia"
-    );
+    progresoEnMemoria = {};
+    try { localStorage.removeItem("progresoGemologia"); } catch (error) {}
 
 
     location.reload();
 
 }
+function actualizarBotonLectura() {
+    const numero = detectarModuloActual();
+    const boton = document.querySelector(".complete-button");
+    if (!numero || !boton) return;
+    const leido = obtenerProgreso()[numero];
+    boton.textContent = leido ? "Desmarcar lectura" : "Marcar lectura como realizada";
+    boton.setAttribute("aria-pressed", String(leido));
+}
+function alternarLectura(numero) {
+    if (!Number.isInteger(numero) || numero < 1 || numero > TOTAL_MODULOS) return;
+    const progreso = obtenerProgreso();
+    progreso[numero] = !progreso[numero];
+    guardarProgreso(progreso);
+    actualizarProgresoModulo(); actualizarProgresoGeneral(); actualizarBotonLectura(); verificarCursoCompleto();
+    mostrarMensaje(almacenamientoDisponible ? (progreso[numero] ? "Lectura marcada en este navegador." : "Marca de lectura retirada.") : "Lectura actualizada solo durante esta sesión; el navegador no permite guardarla.");
+}
+document.addEventListener("DOMContentLoaded", function () {
+    verificarCursoCompleto(); actualizarBotonLectura();
+    const campo = document.getElementById("buscar-recursos");
+    const estado = document.getElementById("resultados-recursos");
+    const tarjetas = Array.from(document.querySelectorAll(".iga-drive-card"));
+    const normalizar = texto => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    if (campo && estado) {
+        const filtrar = () => {
+            const consulta = normalizar(campo.value);
+            let cantidad = 0;
+            tarjetas.forEach(tarjeta => { const visible = normalizar(tarjeta.textContent).includes(consulta); tarjeta.hidden = !visible; if (visible) cantidad++; });
+            estado.textContent = cantidad ? cantidad + " carpetas disponibles en el directorio." : "No se encontraron carpetas con ese término.";
+        };
+        campo.addEventListener("input", filtrar); filtrar();
+    }
+});

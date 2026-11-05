@@ -49,8 +49,9 @@
 
 
 
-        <nav class="main-navigation">
-            <a href="https://classroom.google.com/u/6/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
+        <nav class="main-navigation" id="navegacion-principal" aria-label="Navegación principal">
+<a href="guia.html">Guía de acceso</a>
+            <a href="https://classroom.google.com/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
             <a href="recursos.html#carpetas-drive">Carpetas de Drive</a>
 
 
@@ -127,7 +128,7 @@
 
 
         <button
-            class="mobile-menu-button"
+            class="mobile-menu-button" type="button" aria-label="Abrir menú" aria-controls="navegacion-principal" aria-expanded="false"
             onclick="toggleMenu()">
 
             ☰
@@ -297,12 +298,13 @@
         <div
             class="module-progress"
             id="progreso">
+<p class="progress-disclaimer">Registro personal de lectura en este navegador; no equivale a una calificación ni se sincroniza con Classroom.</p>
 
 
             <div class="progress-information">
 
                 <span>
-                    PROGRESO DEL MÓDULO
+                    LECTURA DEL MÓDULO
                 </span>
 
 
@@ -1214,13 +1216,7 @@
                     </div>
 
 
-                    <a
-                        href="#"
-                        class="resource-button">
-
-                        Abrir
-
-                    </a>
+                    <span class="resource-button pending-resource">Recurso pendiente</span>
 
 
                 </div>
@@ -1262,13 +1258,7 @@
                     </div>
 
 
-                    <a
-                        href="#"
-                        class="resource-button">
-
-                        Abrir
-
-                    </a>
+                    <span class="resource-button pending-resource">Recurso pendiente</span>
 
 
                 </div>
@@ -1309,13 +1299,7 @@
                     </div>
 
 
-                    <a
-                        href="#"
-                        class="resource-button">
-
-                        Abrir
-
-                    </a>
+                    <span class="resource-button pending-resource">Recurso pendiente</span>
 
 
                 </div>
@@ -1407,16 +1391,8 @@
 
 
                     <a
-                        href="#"
-                        class="blue-button">
-
-                        Ver contenido
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
+                        href="https://classroom.google.com/w/ODY5NzM1NDYzODQ5/t/all" target="_blank" rel="noopener noreferrer"
+                        class="blue-button">Consultar actividades en Classroom ↗</a>
 
 
                 </div>
@@ -1661,18 +1637,8 @@
 
 
                     <a
-                        href="#"
-                        class="blue-button">
-
-                        Iniciar actividad
-
-
-                        <span>
-                            →
-                        </span>
-
-
-                    </a>
+                        href="https://classroom.google.com/w/ODY5NzM1NDYzODQ5/t/all" target="_blank" rel="noopener noreferrer"
+                        class="blue-button">Consultar actividades en Classroom ↗</a>
 
 
                 </div>
@@ -1708,7 +1674,7 @@
 
 
                 <h2>
-                    ¡Felicitaciones!
+                    Recorrido de lectura registrado
                 </h2>
 
 
@@ -1747,7 +1713,7 @@
                         </strong>
 
                         <span>
-                            Curso completado
+                            Lecturas realizadas
                         </span>
 
                     </div>
@@ -1835,7 +1801,7 @@
 
 
                 <button
-                    onclick="completarModulo(8)"
+                    onclick="alternarLectura(8)"
                     class="complete-button">
 
                     ✓ Finalizar curso

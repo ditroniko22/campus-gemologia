@@ -6114,3 +6114,19 @@ a {
 .iga-drive-card a { color:#155c78; font-weight:700; margin-top:auto; text-decoration:underline; text-underline-offset:4px; }
 .iga-drive-card a:focus-visible { outline:3px solid #af842d; outline-offset:5px; }
 .iga-drive-note { padding:18px; margin:20px 0; background:#f7f3e8; border-left:4px solid #af842d; line-height:1.7; }
+
+/* Acceso, búsqueda y estados del campus */
+.pending-resource {opacity:.75; cursor:default; box-shadow:none!important;}
+.progress-disclaimer {font-size:.9rem;line-height:1.6;margin:12px 0;color:inherit;}
+.resource-search {margin:24px 0;}
+.resource-search label {display:block;font-weight:700;margin-bottom:8px;}
+.resource-search input {width:100%;max-width:600px;padding:14px;border:1px solid #738694;border-radius:8px;font:inherit;}
+.iga-drive-card[hidden] {display:none!important;}
+.guide-heading {margin:36px 0 16px;}
+.table-scroll {overflow-x:auto;margin:20px 0;}
+.guide-table {border-collapse:collapse;width:100%;background:white;color:#183846;}
+.guide-table th,.guide-table td {padding:14px;border:1px solid #dce4ea;text-align:left;line-height:1.6;}
+.guide-table th {background:#eef4f7;}
+.guide-table a {color:#155c78;text-decoration:underline;}
+a:focus-visible,button:focus-visible,input:focus-visible {outline:3px solid #b78324;outline-offset:4px;}
+@media (min-width:901px) {.header-container {flex-wrap:wrap;gap:12px;} .main-navigation {flex-wrap:wrap;gap:16px;}}

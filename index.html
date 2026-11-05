@@ -57,8 +57,9 @@
 
         <!-- NAVEGACIÓN -->
 
-        <nav class="main-navigation">
-            <a href="https://classroom.google.com/u/6/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
+        <nav class="main-navigation" id="navegacion-principal" aria-label="Navegación principal">
+<a href="guia.html">Guía de acceso</a>
+            <a href="https://classroom.google.com/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Classroom ↗</a>
             <a href="recursos.html#carpetas-drive">Carpetas de Drive</a>
 
 
@@ -137,7 +138,7 @@
         <!-- BOTÓN MENÚ MÓVIL -->
 
         <button
-            class="mobile-menu-button"
+            class="mobile-menu-button" type="button" aria-label="Abrir menú" aria-controls="navegacion-principal" aria-expanded="false"
             onclick="toggleMenu()">
 
             ☰
@@ -576,9 +577,7 @@
 
                 <p>
 
-                    El progreso se actualiza automáticamente
-                    cuando se marca cada módulo como
-                    completado.
+                    El progreso de lectura se guarda en este navegador al marcar cada módulo. No representa una calificación ni se sincroniza con Classroom.
 
                 </p>
 
@@ -622,7 +621,7 @@
 
                 <p class="completed-counter">
 
-                    Módulos completados:
+                    Lecturas realizadas:
 
                     <strong id="completedModules">
                         0/8
@@ -647,7 +646,7 @@
 
 
                 <span>
-                    completado
+                    leído
                 </span>
 
 
@@ -1504,16 +1503,15 @@
             </div>
 
             <span>
-                CURSO COMPLETADO
+                LECTURAS MARCADAS
             </span>
 
             <h2>
-                ¡Felicitaciones!
+                Recorrido de lectura registrado
             </h2>
 
             <p>
-                Se han completado los ocho módulos
-                del Curso de Gemología.
+                Se han marcado las ocho lecturas. Este registro personal no acredita aprobación ni genera un certificado.
             </p>
 
             <div class="completion-statistics">
@@ -1542,9 +1540,9 @@
 </section>
 
 
-<section class="home-section"><div class="section-container"><div class="info-callout"><div><h2>Materiales del curso en Google Drive</h2><p>Directorio de las 14 carpetas del curso: información general, módulos, evaluaciones y recursos de apoyo.</p><a class="gold-button" href="recursos.html#carpetas-drive">Consultar carpetas →</a></div></div></div></section>
+<section class="home-section"><div class="section-container"><div class="info-callout"><div><h2>Materiales del curso en Google Drive</h2><p>Directorio de materiales para estudiantes: información general, módulos, evaluaciones y recursos de apoyo.</p><a class="gold-button" href="recursos.html#carpetas-drive">Consultar carpetas →</a></div></div></div></section>
 
-<section class="home-section" aria-labelledby="classroom-heading"><div class="section-container"><div class="info-callout"><div><h2 id="classroom-heading">Aula del curso en Google Classroom</h2><p>El estudiante puede acceder al aula con la cuenta de Google inscrita en el curso. Los materiales de Drive también están disponibles en el directorio de recursos del campus.</p><a class="gold-button" href="https://classroom.google.com/u/6/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Abrir Google Classroom ↗</a></div></div></div></section>
+<section class="home-section" aria-labelledby="classroom-heading"><div class="section-container"><div class="info-callout"><div><h2 id="classroom-heading">Aula del curso en Google Classroom</h2><p>El estudiante puede acceder al aula con la cuenta de Google inscrita en el curso. Los materiales de Drive también están disponibles en el directorio de recursos del campus.</p><a class="gold-button" href="https://classroom.google.com/c/ODY5NzM1NDYzODQ5" target="_blank" rel="noopener noreferrer">Abrir Google Classroom ↗</a></div></div></div></section>
 </main>
 
 
