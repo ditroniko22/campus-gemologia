@@ -6163,3 +6163,27 @@ a:focus-visible,button:focus-visible,input:focus-visible {outline:3px solid #b78
  .emerald-card-photo img { height: 210px; }
 }
 @media (prefers-reduced-motion: reduce) { .emerald-card-photo img { transition: none; } }
+
+/* Evaluaciones por módulo: controles nativos y lectura cómoda. */
+.module-quiz {background:#f6faf7;border:1px solid #c8dcd0;border-radius:22px;padding:clamp(20px,4vw,40px);scroll-margin-top:110px;color:#183d31;}
+.quiz-eyebrow {font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#436a57;}
+.module-quiz h2 {font-size:clamp(1.5rem,3vw,2rem);margin:10px 0 16px;line-height:1.25;}
+.module-quiz p {line-height:1.65;}
+.quiz-note {font-size:.9rem;color:#50665c;}
+.quiz-form fieldset {min-width:0;margin:28px 0;padding:20px;border:1px solid #b7cdbf;border-radius:14px;background:#fff;}
+.quiz-form legend {font-size:1.05rem;font-weight:700;padding:0 8px;max-width:100%;line-height:1.5;}
+.quiz-option {display:flex;align-items:flex-start;gap:12px;padding:14px;margin:8px 0;border:1px solid #d7e2da;border-radius:10px;cursor:pointer;line-height:1.5;color:#233d32;}
+.quiz-option:has(input:checked) {background:#e5f1e8;border-color:#256347;}
+.quiz-option:hover {border-color:#256347;}
+.quiz-option input {flex:0 0 auto;width:19px;height:19px;margin-top:3px;accent-color:#176340;}
+.quiz-actions {display:flex;flex-wrap:wrap;gap:12px;}
+.quiz-actions button {font:inherit;font-weight:700;padding:14px 20px;min-height:48px;border-radius:10px;cursor:pointer;}
+.quiz-submit {background:#17523b;color:#fff;border:2px solid #17523b;}
+.quiz-reset {background:#fff;color:#17523b;border:2px solid #17523b;}
+.quiz-actions button:disabled {opacity:.6;cursor:default;}
+.quiz-form :focus-visible {outline:3px solid #b87c1b;outline-offset:4px;}
+.quiz-form .quiz-correct {border-left:5px solid #257149;}
+.quiz-form .quiz-incorrect {border-left:5px solid #b45232;}
+.quiz-feedback {padding:12px;background:#f0f5f1;border-radius:8px;font-size:.95rem;}
+.quiz-result:not(:empty) {font-size:1.1rem;font-weight:700;padding:20px;background:#e3efe7;border-radius:12px;margin-top:20px;}
+@media(max-width:600px) {.quiz-form fieldset {padding:12px;}.quiz-option {padding:12px 9px;}.quiz-actions button {width:100%;}}
